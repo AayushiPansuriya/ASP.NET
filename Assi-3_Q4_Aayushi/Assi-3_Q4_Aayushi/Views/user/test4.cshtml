@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "test4";
+}
+
+<h2>test4</h2>
+
+@model OddNumberApp.Models.OddModel
+
+@{
+    ViewBag.Title = "Odd Numbers After User Input";
+}
+
+<h2>Enter a Starting Number (up to 200)</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Enter Number: </label>
+    @Html.TextBoxFor(m => m.InputNumber)
+    <br />
+    <br />
+    <input type="submit" value="Show Odd Numbers" />
+}
+
+@if (Model?.OddNumbers != null && Model.OddNumbers.Any())
+{
+    <h3>Odd Numbers from @Model.InputNumber to 200:</h3>
+    <p>
+        @string.Join(", ", Model.OddNumbers)
+    </p>
+}
+else if (Model?.InputNumber > 200)
+{
+    <p>No output. Please enter number less than or equal to 200.</p>
+}

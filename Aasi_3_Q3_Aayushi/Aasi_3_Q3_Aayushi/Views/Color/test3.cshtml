@@ -1,0 +1,30 @@
+﻿
+
+<h2>test3</h2>
+<h2>Odd Numbers with Alternating Colors
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ODD VALUE</th>
+
+        </tr>
+    </thead>
+    <tbody align="center">
+        @{
+            int id = 1;
+            for (int i = 501; i <= ViewBag.val; i += 2)
+            {
+                var rowColor = (id % 2 == 0) ? "background-color:pink;" : "background-color:lightblue;";
+
+                <tr style="@rowColor">
+                    <td>@id</td>
+                    <td>@i</td>
+                </tr>
+                id++;
+
+            }
+        }
+    </tbody>
+</table>
+</h2>

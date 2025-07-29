@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Test1";
+}
+
+<h2>Test1</h2>
+
+@for (int i = 1; i <= 10; i++)
+{
+    <p>@ViewBag.value x @i = @(ViewBag.value * i)</p>
+    <br />
+}
