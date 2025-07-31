@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h2>Digit Multiplier</h2>
+<form method="post" action="/Digit/Index">
+    <label>Enter a number:</label>
+    <input type="text" name="inputNumber" required />
+    <button type="submit">Submit</button>
+</form>
+
+<br />
+
+@if (ViewBag.Error != null)
+{
+    <div style="color:red">@ViewBag.Error</div>
+}
+
+@if (ViewBag.Result != null)
+{
+    <h4>Input Number: @ViewBag.Input</h4>
+    <h4>Digit Multiplication Result: @ViewBag.Result</h4>
+
+    if (ViewBag.Table != null)
+    {
+        <h4>Multiplication Table:</h4>
+        <p>@Html.Raw(ViewBag.Table)</p>
+    }
+    else
+    {
+        <p>Result is not a single-digit number. Multiplication table will not be displayed.</p>
+    }
+}

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index1";
+}
+
+<h2>Index1</h2>
+<h2>Result:- @ViewBag.multiplication</h2>
+
+@{ 
+    var Result = ViewBag.multiplication;
+
+    if(Result<10)
+    {
+        for(int i=1;i<=10;i++)
+                {
+                    <p>@Result*@i=@(Result*i)</p>
+                }
+    }
+            else
+            {
+                <h2>Result:@ViewBag.multiplication</h2>
+            }
+}
