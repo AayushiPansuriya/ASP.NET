@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<span>
+    student mark =@ViewBag.mark;
+</span>
+
+@if (ViewBag.mark >= 75)
+{
+    <div>Distinction</div>
+}
+
+else if (ViewBag.mark >= 60)
+{
+    <div>first class</div>
+}
+
+else if (ViewBag.mark >= 50)
+{
+    <div>second class</div>
+}
+
+else
+{
+    <div>fail</div>
+}
